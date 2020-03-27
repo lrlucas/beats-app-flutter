@@ -201,8 +201,8 @@ class __TarjetaDescripcionState extends State<_TarjetaDescripcion> {
                     ),
                   ),
                   ///TODO: agregar el efecto material al boton
+                  ///TODO: Solucionado
                   Container(
-                    //TODO: Solucionado
                     width: sizeWidthOfCard * 0.55,
                     height: 40.0,
                     decoration: BoxDecoration(
@@ -212,12 +212,27 @@ class __TarjetaDescripcionState extends State<_TarjetaDescripcion> {
                         bottomRight: Radius.circular(15.0)
                       )
                     ),
-                    child: Center(
-                      child: Text(
-                        'Add to bag',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold
+                    child: Material(
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(15.0),
+                      ),
+                      color: Colors.red,
+                      child: InkResponse(
+                        highlightShape: BoxShape.rectangle,
+                        containedInkWell: true,
+                        borderRadius: BorderRadius.only(
+                          /// Es el encargado de recortar el efecto splash de material
+                          topLeft: Radius.circular(15.0),
+                        ),
+                        onTap: () { },
+                        child: Center(
+                          child: Text(
+                            'Add to bag',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold
+                            ),
+                          ),
                         ),
                       ),
                     ),
