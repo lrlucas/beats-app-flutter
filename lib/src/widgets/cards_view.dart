@@ -173,6 +173,7 @@ class __TarjetaDescripcionState extends State<_TarjetaDescripcion> {
 //                padding: EdgeInsets.all(8.0),
                 padding: EdgeInsets.fromLTRB(20.0, 0, 15.0, 15.0),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text(
                       '${widget.prod.nombre}',
@@ -181,8 +182,18 @@ class __TarjetaDescripcionState extends State<_TarjetaDescripcion> {
                         fontSize: 13.0
                       ),
                     ),
-                    Spacer(),
-                    Icon(FontAwesomeIcons.heart, color: Colors.white, size: 17.0,)
+                    Material(
+                      color: Colors.transparent,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10.0)
+                      ),
+                      child: IconButton(
+                        iconSize: 23.0,
+                        icon: Icon(FontAwesomeIcons.heart),
+                        color: Colors.white,
+                        onPressed: () {},
+                      ),
+                    )
                   ],
                 ),
               ),

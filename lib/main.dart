@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           /// [splashFactory] modifica el comportamiento del splash del efecto material
           /// [InkRipple.splashFactory]
-          splashFactory: InkRipple.splashFactory
+          splashFactory: InkRipple.splashFactory,
         ),
       ),
     );
